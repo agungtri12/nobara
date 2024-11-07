@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonton Bareng Anime</title>
+    <link rel="icon" href="/public/gambar/logo.png"type="image/png">
+    <link rel="stylesheet" href="/src/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="/public/gambar/logo.png" alt="Logo">
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#genre">Genre</a></li>
+        <li><a href="#jadwalrilis">Jadwal Rilis</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+    </ul>
+</nav>
+
+    <!-- Hero Section with Carousel -->
+<section class="hero-carousel">
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <!-- Slide 1 -->
+            <div class="slide-item">
+                <img src="/public/gambar/onepiecebanner.jpg" alt="Anime 1">
+                <div class="slide-content">
+                    <h2>One Piece</h2>
+                    <p>Genre: Action, Adventure</p>
+                    <a href="#" class="btn-primary"><i class="fas fa-play"></i> Putar Sekarang</a>
+                    <a href="#" class="btn-secondary"><i class="fas fa-heart"></i> Favorit Saya</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide-item">
+                <img src="/public/gambar/aotbanner.jpg" alt="Anime 2">
+                <div class="slide-content">
+                    <h2>Attack on Titan</h2>
+                    <p>Genre: Action, Drama</p>
+                    <a href="#" class="btn-primary"><i class="fas fa-play"></i> Putar Sekarang</a>
+                    <a href="#" class="btn-secondary"><i class="fas fa-heart"></i> Favorit Saya</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide-item">
+                <img src="/public/gambar/Lonerlifeinbanner.jpg" alt="Anime 3">
+                <div class="slide-content">
+                    <h2>Loner Life</h2>
+                    <p>Genre: Action, Fantasy</p>
+                    <a href="#" class="btn-primary"><i class="fas fa-play"></i> Putar Sekarang</a>
+                    <a href="#" class="btn-secondary"><i class="fas fa-heart"></i> Favorit Saya</a>
+                </div>
+            </div>
+            <!-- Add more slides here... -->
+            <div class="slide-item">
+                <img src="/public/gambar/demon-slayerbanner.jpg" alt="Anime 4">
+                <div class="slide-content">
+                    <h2>Demon Slayer</h2>
+                    <p>Genre: Action, Fantasy</p>
+                    <a href="#" class="btn-primary"><i class="fas fa-play"></i> Putar Sekarang</a>
+                    <a href="#" class="btn-secondary"><i class="fas fa-heart"></i> Favorit Saya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Indicators Container -->
+    <div class="carousel-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+    </div>
+</section>
+
+
+
+    <div class="anime-section">
+        <h3>Anime Peringkat</h3>
+        <button class="scroll-button left">←</button>
+        <div class="slider-horizontal" id="anime-populer"></div>
+        <button class="scroll-button right">→</button>
+    </div>
+    
+    
+    <section class="genre" id="genre">
+        <h3>Pilihan Genre</h3>
+        <div class="genre-container">
+            <button class="scroll-left"><i class="fas fa-chevron-left"></i></button>
+            <div class="genre-list-wrapper">
+                <div class="genre-list">
+                    <a href="/Genre/action/h.html"><button>Action</button></a>
+                    <a href="/Genre/adventure/h.html"><button>Adventure</button></a>
+                    <a href="/Genre//comedy/h.html"><button>Comedy</button></a>
+                    <a href="/Genre/drama/h.html"><button>Drama</button></a>
+                    <a href="link-to-fantasy.html"><button>Fantasy</button></a>
+                    <a href="link-to-horror.html"><button>Horror</button></a>
+                    <a href="link-to-mecha.html"><button>Mecha</button></a>
+                    <a href="link-to-music.html"><button>Music</button></a>
+                    <a href="link-to-mystery.html"><button>Mystery</button></a>
+                    <a href="link-to-psychological.html"><button>Psychological</button></a>
+                    <a href="link-to-romance.html"><button>Romance</button></a>
+                    <a href="link-to-sci-fi.html"><button>Sci-Fi</button></a>
+                    <a href="link-to-slice-of-life.html"><button>Slice of Life</button></a>
+                    <a href="link-to-sports.html"><button>Sports</button></a>
+                    <a href="link-to-supernatural.html"><button>Supernatural</button></a>
+                    <a href="link-to-thriller.html"><button>Thriller</button></a>
+                    <a href="link-to-historical.html"><button>Historical</button></a>
+                    <a href="link-to-martial-arts.html"><button>Martial Arts</button></a>
+                    <a href="link-to-shoujo.html"><button>Shoujo</button></a>
+                    <a href="link-to-shounen.html"><button>Shounen</button></a>
+                    <a href="link-to-seinen.html"><button>Seinen</button></a>
+                    <a href="link-to-josei.html"><button>Josei</button></a>
+                    <a href="link-to-military.html"><button>Military</button></a>
+                    <a href="link-to-parody.html"><button>Parody</button></a>
+                </div>
+            </div>
+            <button class="scroll-right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+    
+    
+
+
+
+
+    <section class="jadwal" id="jadwalrilis">
+        <h3 >Jadwal Tayang</h3>
+        <div class="days">
+            <button class="day" data-day="monday">Senin</button>
+            <span class="date" id="date-monday"></span>
+            
+            <button class="day" data-day="tuesday">Selasa</button>
+            <span class="date" id="date-tuesday"></span>
+            
+            <button class="day" data-day="wednesday">Rabu</button>
+            <span class="date" id="date-wednesday"></span>
+            
+            <button class="day" data-day="thursday">Kamis</button>
+            <span class="date" id="date-thursday"></span>
+            
+            <button class="day" data-day="friday">Jumat</button>
+            <span class="date" id="date-friday"></span>
+            
+            <button class="day" data-day="saturday">Sabtu</button>
+            <span class="date" id="date-saturday"></span>
+            
+            <button class="day" data-day="sunday">Minggu</button>
+            <span class="date" id="date-sunday"></span>
+        </div>
+    
+        <!-- Kontainer untuk setiap hari -->
+        <div class="anime-day-content hidden" id="monday"></div>
+        <div class="anime-day-content hidden" id="tuesday"></div>
+        <div class="anime-day-content hidden" id="wednesday"></div>
+        <div class="anime-day-content hidden" id="thursday"></div>
+        <div class="anime-day-content hidden" id="friday"></div>
+        <div class="anime-day-content hidden" id="saturday"></div>
+        <div class="anime-day-content hidden" id="sunday"></div>
+    </section>
+
+    <div class="anime-section">
+        <h3>Anime Tamat</h3>
+        <button class="scroll-button left">←</button>
+        <div class="slider-horizontal" id="anime-tamat"></div>
+        <button class="scroll-button right">→</button>
+    </div>
+    
+    <div class="anime">
+        <h3>Anime Semua</h3>
+        <div id="anime-semua" class="anime-container-vertical"></div>
+        <button id="next-button" class="next-button hidden">Selanjutnya</button>
+        <div class="anime-more hidden">
+            <h3 class="more-title">Klik untuk lebih banyak</h3>
+            <a href="link-to-see-all" class="see-all-button">Lihat Semua</a>
+        </div>
+    </div>
+    
+    
+    <br>
+      <!-- Footer -->
+      <footer id="kontak">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/public/gambar/logo.png" alt="Logo Footer">
+            </div>
+            <div class="footer-info">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <!-- Tambahkan ikon media sosial -->
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nonton Bareng Anime. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="/src/js/index.js"></script>
+</body>
+</html>

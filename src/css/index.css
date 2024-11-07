@@ -1,0 +1,1032 @@
+    /* =========================
+    Basic Styles Reset
+    ========================= */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* =========================
+    Navbar Styles
+    ========================= */
+    /* Navbar Styles */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: #2c3e50; /* Samakan dengan warna footer */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Lebih mendalam bayangan */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: background-color 0.3s; /* Transisi halus saat mengganti warna latar belakang */
+    }
+    
+    .logo img {
+        max-width: 50px; /* Ukuran logo */
+        height: auto;
+    }
+    
+    .nav-links {
+        list-style-type: none; /* Hilangkan bullet points */
+        display: flex;
+        align-items: center;
+        gap: 30px; /* Spasi antar tautan */
+    }
+    
+    .nav-links li {
+        position: relative;
+    }
+    
+    .nav-links a {
+        color: white; /* Warna teks */
+        text-decoration: none; /* Hilangkan garis bawah */
+        font-weight: bold; /* Teks tebal */
+        padding: 10px 15px; /* Padding untuk tautan */
+        transition: color 0.3s ease, border-bottom 0.3s ease; /* Transisi warna dan border-bottom */
+        border-bottom: 2px solid transparent; /* Garis bawah transparan sebagai default */
+    }
+    
+    .nav-links a:hover {
+        color: #3498db; /* Warna teks saat hover */
+        border-bottom: 2px solid white; /* Garis bawah hanya muncul saat hover */
+    }
+
+    /* =========================
+    Banner Styles
+    ========================= */
+    /* Banner Section */
+    /* Hero Carousel Section */
+    .hero-carousel {
+        position: relative;
+        overflow: hidden;
+        height: 100vh; /* Full height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        z-index: 1; /* Ensure hero section is on top */
+    }
+    
+    .carousel-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Full width */
+        height: 100%;
+        display: flex; /* Use flexbox for slide alignment */
+        transition: transform 0.5s ease-in-out; /* Smooth transition for slide change */
+    }
+    
+    .carousel-slide {
+        display: flex;
+        width: 100%; /* Each slide takes full width */
+    }
+    
+    .slide-item {
+        flex: 0 0 100%; /* Ensure each slide takes full width */
+        position: relative;
+    }
+    
+    .slide-item img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover; /* Cover the entire area */
+    }
+    
+    /* Slide Content */
+    .slide-content {
+        position: absolute;
+        bottom: 70%; /* Positioned from the bottom */
+        left: 5%;
+        color: white;
+        text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9); /* Enhanced shadow for better readability */
+        padding: 1.5rem; /* Increased padding for better spacing */
+        background: rgba(0, 0, 0, 0.6); /* Background for readability */
+        border-radius: 12px; /* Rounded corners */
+        z-index: 10; /* Ensure content is above other elements */
+    }
+    
+    /* Slide Heading */
+    .slide-content h2 {
+        font-size: 3.5rem; /* Increased font size */
+        margin-bottom: 0.5rem; /* Consistent margin */
+        font-weight: 700; /* Bold font for emphasis */
+    }
+    
+    /* Slide Description */
+    .slide-content p {
+        font-size: 1.6rem; /* Increased font size */
+        margin-bottom: 1.5rem;
+        line-height: 1.4; /* Improved line height */
+    }
+    
+    /* Button Styles */
+    .btn-primary, .btn-secondary {
+        padding: 1rem 2.5rem; /* Increased padding for larger buttons */
+        text-decoration: none;
+        font-size: 1.2rem;
+        border-radius: 8px; /* More rounded corners */
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+        display: inline-block; /* Button as block element */
+    }
+    
+    /* Primary Button */
+    .btn-primary {
+        background-color: #ff5733; /* Primary button color */
+    }
+    
+    /* Primary Button Hover */
+    .btn-primary:hover {
+        background-color: #ff2e00; /* Darker on hover */
+        transform: translateY(-2px); /* Slight lift effect */
+    }
+    
+    /* Secondary Button */
+    .btn-secondary {
+        background-color: #333; /* Secondary button color */
+    }
+    
+    /* Secondary Button Hover */
+    .btn-secondary:hover {
+        background-color: #555; /* Darker on hover */
+        transform: translateY(-2px); /* Slight lift effect */
+    }
+    
+    /* Carousel Indicators */
+    .carousel-indicators {
+        position: absolute;
+        bottom: 10%; /* Adjust based on your layout */
+        left: 50%; /* Align to left */
+        display: flex; /* Flex container for indicators */
+        gap: 0.5rem; /* Space between indicators */
+        z-index: 15; /* Above the content */
+    }
+    
+    .indicator {
+        width: 15px; /* Width of each indicator */
+        height: 15px; /* Height of each indicator */
+        background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+        border-radius: 50%; /* Make it circular */
+        cursor: pointer; /* Change cursor on hover */
+        transition: background-color 0.3s; /* Smooth transition for color change */
+    }
+    
+    /* Active Indicator */
+    .indicator.active {
+        background-color: #ff5733; /* Highlight active indicator */
+    }
+    
+    /* Hover effect for indicators */
+    .indicator:hover {
+        background-color: rgba(255, 255, 255, 0.7); /* Slightly brighter on hover */
+    }
+    
+    /* =========================
+    Anime List Styles
+    ========================= */
+    .anime-section {
+        position: relative;
+        overflow: hidden; /* Sembunyikan konten yang meluap */
+        margin: 20px 0; /* Margin atas dan bawah */
+        padding: 20px; /* Tambahkan padding untuk memberi ruang */
+        background-color: #ffffff; /* Latar belakang putih */
+        border-radius: 8px; /* Sudut membulat */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    }
+    
+    .scroll-button {
+        position: absolute;
+        display: inline-block;
+        top: 50%; /* Posisikan di tengah vertikal */
+        transform: translateY(-50%); /* Pastikan tombol berada di tengah */
+        background-color: rgba(0, 0, 0, 0.5); /* Tombol semi-transparan */
+        color: white;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 1;
+        border-radius: 50%; /* Bentuk bulat */
+        transition: background-color 0.3s; /* Transisi untuk efek hover */
+    }
+    
+    .scroll-button.left {
+        left: 10px; /* Tombol di kiri */
+    }
+    
+    .scroll-button.right {
+        right: 10px; /* Tombol di kanan */
+    }
+    
+    .scroll-button.hidden {
+        display: none; /* Sembunyikan tombol */
+    }
+    
+    .scroll-button:hover {
+        background-color: rgba(0, 0, 0, 0.8); /* Warna lebih gelap saat di-hover */
+    }
+    
+    .scroll-button:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(0, 0, 0);
+        z-index: -1;
+        border-radius: 50%; /* Sudut membulat untuk latar belakang */
+    }
+    
+    .anime-list {
+        margin: 0; /* Hapus margin agar lebih rapi */
+    }
+    
+    .slider-horizontal {
+        display: flex;
+        overflow-x: auto; /* Biarkan menggulir secara horizontal */
+        -webkit-overflow-scrolling: touch; /* Gulir halus pada perangkat sentuh */
+        scrollbar-width: none; /* Untuk Firefox */
+    }
+    
+    .slider-horizontal::-webkit-scrollbar {
+        display: none; /* Sembunyikan scrollbar di Chrome, Safari, dan Edge */
+    }
+    
+    .anime-item {
+        position: relative;
+        width: 455px; /* Atur lebar sesuai kebutuhan */
+        height: 290px; /* Tinggi tetap untuk tata letak */
+        margin-right: 30px; /* Jarak antar item */
+        text-align: center;
+        transition: transform 0.2s;
+        overflow: hidden; /* Sembunyikan overflow */
+    }
+    
+    .anime-item:hover .anime-info {
+        display: block; /* Tampilkan info saat hover */
+    }
+    
+    .anime-item:hover {
+        transform: scale(1.05); /* Perbesar saat hover */
+    }
+    
+    .anime-item img {
+    width: 100%;
+    height: 200px; /* Atur tinggi tetap agar semua gambar seragam */
+    object-fit: cover; /* Sesuaikan gambar agar tidak terdistorsi */
+    border-radius: 10px;
+    }
+    
+    .anime-info {
+        display: none; /* Sembunyikan info secara default */
+        position: absolute; /* Posisi info di atas gambar */
+        bottom: 0; /* Posisi di bagian bawah */
+        left: 0;
+        right: 0;
+        color: white;
+        box-shadow:0 5px 9px #000000;
+        text-align: center; /* Teks di tengah */
+        padding: 5px 0; /* Padding di sekitar teks */
+    }
+    
+    .anime-rating {
+        font-size: 60px; /* Ukuran teks rating */
+        color: #ffffff; /* Warna teks putih */
+        background-color: rgba(0, 0, 0, 0.6); /* Latar belakang hitam transparan */
+        padding: 5px 10px; /* Padding teks rating */
+        border-radius: 15px; /* Sudut membulat */
+        position: absolute;
+        top: 2px;
+        right: 1px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Bayangan untuk efek mendalam */
+    }
+    
+    .anime-item h4 {
+        font-size: 16px; /* Ukuran teks judul */
+        margin: 10px 0 5px; /* Margin judul */
+        text-align: center;
+    }
+    
+    .anime-item p {
+        font-size: 14px; /* Ukuran teks deskripsi */
+        color: #555; /* Warna teks */
+    }
+    
+    .anime-rak-buku {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 45px; /* Jarak antar item */
+        padding: 60px;
+        background-color: #f9f9f9;
+    }
+    
+    .more-section {
+        text-align: center; /* Posisikan teks di tengah */
+        margin-top: 20px; /* Jarak atas */
+    }
+    
+    .more-button {
+        display: inline-block;
+        padding: 10px 20px; /* Padding tombol */
+        background-color: #007BFF; /* Warna latar tombol */
+        color: #FFFFFF; /* Warna teks tombol */
+        border-radius: 5px;
+        text-decoration: none; /* Hilangkan garis bawah */
+        margin-top: 15px; /* Jarak atas */
+        transition: background-color 0.3s;
+    }
+    
+    .more-button:hover {
+        background-color: #0056b3; /* Warna lebih gelap saat di-hover */
+    }
+    
+    .anime-section {
+        margin-bottom: 30px;
+    }
+    
+/* Anime Semua */
+.anime {
+    text-align: center; /* Center align for the anime section */
+}
+
+.anime-container-vertical {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    gap: 30px; /* Reduced gap for a more compact layout */
+    justify-content: center; 
+    padding: 20px 80px; 
+    margin: 0 auto; 
+    max-width: 1200px; 
+    background-color: #f0f0f0; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+.next-button {
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #3498db; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    margin: 20px 0; /* Spacing above and below */
+}
+
+.next-button:hover {
+    background-color: #2980b9; /* Darker background on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.anime-more {
+    text-align: center; 
+    margin-top: 30px; 
+}
+
+.anime-more.hidden {
+    display: none; 
+}
+
+.more-title {
+    font-size: 20px; /* Increased font size for visibility */
+    color: #333; /* Darker color for the title */
+    margin-bottom: 15px; 
+}
+
+.see-all-button {
+    padding: 12px 25px; 
+    background-color: #3498db; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    display: inline-block; 
+}
+
+.see-all-button:hover {
+    background-color: #2980b9; 
+    transform: scale(1.05); 
+}
+
+.anime-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background-color: #fff; 
+    border-radius: 10px; 
+    padding: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease; 
+}
+
+.anime-item:hover {
+    transform: translateY(-5px); 
+}
+
+.anime-image {
+    width: 100%; /* Gambar menyesuaikan lebar kontainer */
+    height: 200px; /* Atur tinggi tetap untuk semua gambar */
+    object-fit: cover; /* Mempertahankan rasio aspek gambar */
+    border-radius: 10px; /* Sudut membulat */
+    overflow: hidden; /* Sembunyikan bagian yang meluap */
+    transition: transform 0.2s ease; /* Transisi saat di-hover */
+}
+
+.anime-image:hover {
+    transform: scale(1.05); 
+}
+
+.anime-info h4 {
+    margin: 10px 0; 
+    font-size: 16px; 
+    color: #333; /* Darker text color for better readability */
+    padding: 5px; 
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+.anime-more {
+    text-align: center; /* Center align for "more" message */
+    margin-top: 30px; /* Increased margin-top for spacing */
+}
+
+.more-title {
+    font-size: 18px; /* Font size for the title */
+    color: #000000; /* Dark color for the title */
+    margin-bottom: 15px; /* Margin below the title for spacing from the button */
+}
+
+.see-all-button {
+    padding: 12px 25px; /* Button padding */
+    background-color: #3498db; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners for button */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color */
+    display: inline-block; /* Display as inline-block for proper padding */
+}
+
+.see-all-button:hover {
+    background-color: #2980b9; /* Darker background on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+
+
+    /* =========================
+    Genre Styles
+    ========================= */
+    .genre {
+        background-color: #f9f9f9; /* Latar belakang terang untuk kontras */
+        padding: 20px;
+        border-radius: 12px; /* Sudut membulat lebih besar untuk kesan modern */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan yang lebih kuat untuk kedalaman */
+        transition: background-color 0.3s ease; /* Transisi halus untuk latar belakang */
+    }
+    
+    .genre h3 {
+        font-size: 26px; /* Heading yang lebih besar */
+        margin-bottom: 15px; /* Ruang di bawah heading */
+        color: #333; /* Warna gelap untuk teks */
+        text-align: center; /* Menengahkan teks untuk kesan simetris */
+    }
+    
+    .genre-container {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        position: relative;
+        overflow-x: auto; /* Mengizinkan pengguliran horizontal */
+        white-space: nowrap; /* Mencegah baris baru */
+        padding: 10px 0; /* Padding atas dan bawah untuk kontainer */
+        scrollbar-width: thin; /* Mengatur lebar scrollbar untuk Firefox */
+    }
+    
+    /* Style untuk scrollbar */
+    .genre-container::-webkit-scrollbar {
+        height: 8px; /* Tinggi scrollbar */
+    }
+    
+    .genre-container::-webkit-scrollbar-thumb {
+        background-color: #007bff; /* Warna scrollbar */
+        border-radius: 10px; /* Sudut membulat pada scrollbar */
+    }
+    
+    .genre-container::-webkit-scrollbar-thumb:hover {
+        background-color: #0056b3; /* Warna lebih gelap saat hover */
+    }
+    
+    .genre-list {
+        display: flex;
+        gap: 15px; /* Spasi antar tombol yang lebih besar */
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .genre-list button {
+        padding: 12px 18px; /* Padding yang lebih besar untuk tombol */
+        background-color: #007bff; /* Latar belakang biru */
+        color: white;
+        border: none;
+        border-radius: 8px; /* Sudut tombol membulat lebih besar */
+        cursor: pointer;
+        flex-shrink: 0; /* Menghindari tombol mengecil */
+        transition: background-color 0.3s, transform 0.2s; /* Transisi untuk efek hover */
+        font-size: 16px; /* Ukuran font tombol */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan lembut pada tombol */
+    }
+    
+    .genre-list button:hover {
+        background-color: #0056b3; /* Biru lebih gelap saat hover */
+        transform: scale(1.05); /* Sedikit membesar saat hover */
+    }
+    
+    .scroll-left,
+    .scroll-right {
+        background-color: #007bff; /* Latar belakang biru untuk tombol */
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%; /* Tombol bulat */
+        font-size: 20px; /* Ukuran font tombol scroll yang lebih besar */
+        transition: background-color 0.3s, transform 0.2s; /* Transisi untuk efek hover */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan lembut pada tombol scroll */
+    }
+    
+    .scroll-left:hover,
+    .scroll-right:hover {
+        background-color: #0056b3; /* Biru lebih gelap saat hover */
+        transform: scale(1.1); /* Sedikit membesar saat hover */
+    }
+    
+    .scroll-left {
+        position: absolute;
+        left: 10px; /* Sedikit jarak dari tepi */
+        z-index: 10; /* Agar tetap di depan konten */
+    }
+    
+    .scroll-right {
+        position: absolute;
+        right: 10px; /* Sedikit jarak dari tepi */
+        z-index: 10; /* Agar tetap di depan konten */
+    }
+    /* =========================
+    Individual Anime Item Styles
+    ========================= */
+    /* Container for the "Jadwal Tayang" section */
+    .jadwal {
+        padding: 20px;
+        background-color: #f8f9fa; /* Warna latar belakang terang */
+        border-radius: 12px; /* Sudut membulat untuk kesan modern */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan lembut untuk kedalaman */
+        margin-bottom: 40px;
+        transition: box-shadow 0.3s ease; /* Transisi untuk efek bayangan */
+    }
+    
+    .jadwal:hover {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Bayangan lebih kuat saat hover */
+    }
+    
+    .jadwal .date {
+        display: block;
+        font-size: 14px;
+        color: #888; /* Warna teks abu-abu */
+        margin-bottom: 10px;
+        text-align: center;
+        font-style: italic; /* Miring untuk teks tanggal */
+    }
+    
+    /* Heading styling */
+    .jadwal h3 {
+        text-align: center;
+        font-size: 26px; /* Ukuran font yang lebih besar untuk heading */
+        color: #333; /* Warna gelap untuk teks */
+        margin-bottom: 20px;
+    }
+    
+    /* Container for the day buttons */
+    .days {
+        display: flex;
+        justify-content: flex-start; /* Align buttons to the start */
+        gap: 10px; /* Spasi antar tombol */
+        overflow-x: auto; /* Izinkan pengguliran horizontal jika diperlukan */
+        white-space: nowrap; /* Mencegah tombol membungkus */
+        padding-bottom: 10px; /* Spasi di bawah tombol */
+        padding-top: 10px; /* Spasi di atas tombol */
+        border-bottom: 2px solid #ddd; /* Separator visual di bawah */
+    }
+    
+    /* Day button styling */
+    .day {
+        padding: 12px 18px; /* Padding yang lebih besar untuk tombol */
+        margin: 0 5px; /* Margin horizontal untuk tombol */
+        cursor: pointer;
+        border: 2px solid transparent; /* Border transparan untuk efek hover */
+        border-radius: 8px; /* Sudut tombol membulat */
+        background-color: #f1f1f1; /* Latar belakang tombol */
+        color: #007bff; /* Warna teks tombol */
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transisi untuk efek hover */
+    }
+    
+    .day:hover {
+        background-color: #007bff; /* Latar belakang tombol saat hover */
+        color: white; /* Warna teks tombol saat hover */
+        border-color: #007bff; /* Warna border saat hover */
+    }
+    
+    /* Active button styling */
+    .day.active {
+        background-color: #007bff; /* Latar belakang tombol aktif */
+        color: white; /* Warna teks tombol aktif */
+        border-color: #0056b3; /* Warna border tombol aktif */
+    }
+    
+    /* Anime-day-content container */
+    .anime-day-content {
+        display: flex;
+        flex-wrap: nowrap; /* Pertahankan item anime dalam satu baris */
+        overflow-x: auto; /* Izinkan pengguliran horizontal jika item meluap */
+        padding: 20px 0; /* Spasi atas dan bawah konten anime */
+        gap: 15px; /* Spasi antar item anime */
+        scrollbar-width: thin; /* Mengatur lebar scrollbar untuk Firefox */
+    }
+    
+    /* Style untuk scrollbar */
+    .anime-day-content::-webkit-scrollbar {
+        height: 8px; /* Tinggi scrollbar */
+    }
+    
+    .anime-day-content::-webkit-scrollbar-thumb {
+        background-color: #007bff; /* Warna scrollbar */
+        border-radius: 10px; /* Sudut membulat pada scrollbar */
+    }
+    
+    .anime-day-content::-webkit-scrollbar-thumb:hover {
+        background-color: #0056b3; /* Warna lebih gelap saat hover */
+    }
+    
+    /* Individual anime item stays in horizontal row */
+    .anime-item {
+        margin: 10px;
+        flex-shrink: 0; /* Prevent shrinking of anime items */
+        width: 200px; /* Maintain fixed width for items */
+        overflow: hidden; /* Hide overflow for clean effect */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        background-color: #fff; /* White background for items */
+        transition: transform 0.3s; /* Transition for hover effects */
+        position: relative; /* For title positioning */
+    }
+    
+    /* Image styling */
+
+    
+    /* Title styling */
+    .anime-title {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: white; /* White text color */
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 5px 0; /* Padding for title */
+        opacity: 0; /* Start hidden */
+        transition: opacity 0.3s; /* Fade-in effect */
+    }
+    
+    /* Hover effects for anime items */
+    .anime-item:hover .anime-title {
+        opacity: 1; /* Show title on hover */
+    }
+    
+    .anime-item:hover .anime-image {
+        transform: scale(1.05); /* Slight zoom effect on hover */
+    }
+    
+
+    /* =========================
+    General Button Styles
+    ========================= */
+    button {
+        padding: 10px 15px;
+        background-color: #007bff; /* Button color */
+        color: white; /* Text color */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer on hover */
+        transition: background-color 0.3s; /* Transition for hover effect */
+    }
+
+    button:hover {
+        background-color: #0056b3; /* Darker color on hover */
+    }
+
+    /* =========================
+    Utility Classes
+    ========================= */
+    .hidden {
+        display: none; /* Hide elements */
+    }
+
+   
+
+    /* =========================
+    Anime Tamat Styles
+    ========================= */
+    .anime-tamat .slider-horizontal {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .anime-tamat .anime-item img {
+        width: 150px;
+    }
+    /* Footer */
+    footer {
+        background-color: #2c3e50;
+        color: white;
+        padding: 40px 0;
+        font-family: 'Arial', sans-serif;
+        border-top: 5px solid #3498db;
+    }
+    
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+    
+    .footer-logo img {
+        height: 60px;
+        margin-right: 20px;
+    }
+    
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+    
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .footer-links ul li {
+        margin: 0 15px;
+        padding: 5px 0;
+    }
+    
+    .footer-links ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+        position: relative; /* Untuk positioning garis bawah */
+        padding-bottom: 2px; /* Sedikit padding untuk spasi dengan garis bawah */
+        transition: all 0.3s ease;
+    }
+    
+    .footer-links ul li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: #3498db; /* Warna garis bawah */
+        left: 0;
+        bottom: 0;
+        transition: width 0.3s ease;
+    }
+    
+    .footer-links ul li a:hover::after {
+        width: 100%; /* Memunculkan garis saat hover */
+    }
+    
+    .footer-social a {
+        color: white;
+        margin: 0 10px;
+        font-size: 1.8em;
+        transition: color 0.3s ease;
+    }
+    
+    .footer-social a:hover {
+        color: #3498db;
+    }
+    
+    .footer-bottom {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.9em;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-bottom p {
+        margin: 0;
+        font-size: 0.9em;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    /* END Footer */
+    /* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .slide-content {
+        left: 5%; /* Adjust content position for smaller screens */
+        bottom: 15%; /* Raise content for visibility */
+        padding: 1rem; /* Reduced padding */
+    }
+
+    .slide-content h2 {
+        font-size: 2.5rem; /* Adjust heading size */
+    }
+
+    .slide-content p {
+        font-size: 1.2rem; /* Adjust paragraph size */
+    }
+
+    .btn-primary, .btn-secondary {
+        font-size: 1rem; /* Adjust button size */
+    }
+    .navbar {
+        flex-wrap: wrap; /* Memungkinkan navbar untuk membungkus jika diperlukan */
+        padding: 10px 20px; /* Mengurangi padding pada perangkat kecil */
+    }
+
+    .nav-links {
+        flex-wrap: nowrap; /* Pastikan tautan tetap dalam satu baris */
+        gap: 15px; /* Mengurangi spasi antar tautan */
+        align-items: center; /* Rata tengah untuk tautan */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 8px 12px; /* Adjusted padding */
+    }
+    .slide-content h2 {
+        font-size: 2rem; /* Smaller font size on mobile */
+    }
+
+    .slide-content p {
+        font-size: 1.2rem; /* Adjust paragraph size */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Smaller headline for mobile */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Adjust paragraph size */
+    }
+    .genre-container {
+        padding: 5px; /* Padding yang lebih kecil untuk layar kecil */
+    }
+
+    .genre h3 {
+        font-size: 22px; /* Ukuran font heading yang lebih kecil di layar kecil */
+    }
+
+    .genre-list button {
+        padding: 10px 14px; /* Menyesuaikan padding untuk tombol di layar kecil */
+        font-size: 14px; /* Ukuran font tombol yang lebih kecil */
+    }
+
+    .scroll-left, 
+    .scroll-right {
+        font-size: 18px; /* Ukuran font tombol scroll yang sedikit lebih kecil */
+        padding: 8px; /* Mengurangi padding untuk tombol scroll */
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin-bottom: 20px;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links ul li {
+        margin: 10px 0;
+    }
+
+    .footer-social {
+        margin-top: 20px;
+    }
+
+    .footer-social a {
+        font-size: 1.5em;
+    }
+    .jadwal {
+        padding: 15px; /* Padding yang lebih kecil untuk layar kecil */
+    }
+
+    .jadwal h3 {
+        font-size: 22px; /* Ukuran font heading yang lebih kecil di layar kecil */
+    }
+
+    .day {
+        padding: 8px 12px; /* Menyesuaikan padding untuk tombol di layar kecil */
+        font-size: 14px; /* Ukuran font tombol yang lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .genre-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align */
+    }
+
+    .genre-list {
+        flex-wrap: wrap; /* Wrap buttons to the next line */
+        justify-content: center; /* Center buttons */
+    }
+
+    .scroll-left,
+    .scroll-right {
+        position: relative; /* Position relative in column layout */
+        margin: 10px; /* Space between buttons */
+    }
+    .anime-item {
+        width: 150px; /* Smaller anime cards on mobile */
+    }
+
+    .anime-image {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    /* Ensure that buttons and anime items remain horizontal */
+    .days {
+        gap: 5px;
+        padding-bottom: 8px;
+    }
+
+    .day {
+        padding: 8px 12px; /* Slightly smaller padding for small screens */
+    }
+
+    /* Anime items should remain scrollable horizontally */
+    .anime-item {
+        width: 150px; /* Adjust item width for smaller screens */
+    }
+
+    .anime-image {
+        width: 100%; /* Keep image fully inside container */
+    }
+    .footer-logo img {
+        height: 50px;
+    }
+
+    .footer-links ul li a {
+        font-size: 1em;
+    }
+
+    .footer-social a {
+        font-size: 1.2em;
+        margin: 0 8px;
+    }
+}
+@media (max-width: 600px) {
+    .anime-container-vertical {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller columns for mobile */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .more-title {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    .see-all-button {
+        padding: 10px 20px; /* Smaller button padding for mobile */
+        font-size: 14px; /* Smaller font size for mobile button */
+    }
+
+    .anime-info h4 {
+        font-size: 14px; /* Smaller font size for anime titles on mobile */
+    }
+
+    .anime-item {
+        margin: 5px; /* Adjust margin for smaller screens if needed */
+    }
+}
